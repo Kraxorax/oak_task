@@ -4,7 +4,8 @@ import { App } from './components/App'
 import { makeTestModel } from './models/TestModel'
 
 const startupModel = makeTestModel()
+const startupStorage = window.localStorage
 
 ReactDOM.render(
-    <App model={startupModel} />, document.getElementById('root')
+    <App startupModel={startupModel} storage={startupStorage} />, document.getElementById('root')
 );

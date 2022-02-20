@@ -1,0 +1,62 @@
+#root{
+  display: flex;
+  
+  #main {
+    font-family: sans-serif;
+    width: 320px;
+    margin: auto;
+
+    .stage {
+      h2 {
+        display: flex;
+        line-height: 1.2em;
+        div.index {
+          background-color: black;
+          border-radius: 1em;
+          width: 1.2em;
+          display: inline-block;
+          color: white;
+          padding-left: 0.7em;
+          font-size: 0.6em;
+        }
+        span.title {
+          display: inline-block;
+          margin-left: 0.4em;
+        }
+        div.checkmark {
+          margin-left: auto;
+          font-size: 2em;
+        }
+
+      }
+    }
+
+    .step {
+      cursor: pointer;
+
+      &.done {
+        text-decoration: line-through;
+        label {
+          cursor: not-allowed;
+        }
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+
+      input[type="checkbox"] {
+        cursor: inherit;
+        margin-right: 8px;
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+      label {
+        cursor: inherit;
+      }
+    }
+
+  }
+
+}

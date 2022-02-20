@@ -19,3 +19,32 @@ export const makeTestModel = (): StartupModel => {
     ]);
     return startupModel;
 }
+
+const modelJson =
+{
+    "phases": [
+        {
+            "title": "Foundation",
+            "tasks":
+                [
+                    { "title": "Setup virtual office", "isDone": false },
+                    { "title": "Set mission & vision", "isDone": false },
+                    { "title": "Select busines name", "isDone": false },
+                    { "title": "Buy domains", "isDone": false }
+                ]
+        }, {
+            "title": "Discovery", "tasks":
+                [
+                    { "title": "Create roadmap", "isDone": false },
+                    { "title": "Competitor analysis", "isDone": false }
+                ]
+        }
+        , {
+            "title": "Delivery", "tasks":
+                [
+                    { "title": "Release marketing website", "isDone": false },
+                    { "title": "Release MVP", "isDone": false }
+                ]
+        }
+    ]
+}
