@@ -9,8 +9,9 @@ interface StepAdderProps {
 export const StepAdder = ({ updateModel, addTask }: StepAdderProps) => {
 
   const onKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      addTask(new Task(e.currentTarget.value, false));
+    const inputText = e.currentTarget.value.trim();
+    if (e.key === 'Enter' && inputText.length > 0) {
+      addTask(new Task(inputText, false));
       updateModel();
       e.currentTarget.value = '';
     }

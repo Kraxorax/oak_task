@@ -13,7 +13,6 @@ export const App = ({ startupModel, storage }: AppProps): React.ReactElement => 
     if (storage.getItem('startupModel') != null) {
         const sm = storage.getItem('startupModel') as string;
         initialModel = StartupModel.fromJson(JSON.parse(sm));
-        console.log(initialModel)
     }
 
     const [model, setModel] = React.useState(initialModel);
